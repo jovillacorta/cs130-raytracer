@@ -59,11 +59,10 @@ Shade_Surface(const Ray& ray,const vec3& intersection_point,
 
     	Is = color_specular * world.lights[i]->Emitted_Light(lvec) * expSpecular;
     	sum_Is += Is; 
-
-    	color += sum_Id + sum_Is;  
     }
 	}
 
+	color += sum_Id + sum_Is;  
 
     return color;
 }
