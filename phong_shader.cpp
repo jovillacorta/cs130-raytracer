@@ -25,7 +25,7 @@ Shade_Surface(const Ray& ray,const vec3& intersection_point,
 
     	Hit shadowObj = world.Closest_Intersection(sRay); //check: does the shadow ray hit anything?
 
-    if (!shadowObj.object){
+    if (!shadowObj.object || lvec.magnitude() < shadowObj.dist){
     //for each light find their diffuse and specular intensities
 
     	vec3 Id;
